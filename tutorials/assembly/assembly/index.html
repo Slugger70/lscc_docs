@@ -402,12 +402,16 @@ If you’re not familiar with the FASTQ format, click here for an overview</p>
 <p>Lets have a look at one of these contigs and see if we can find out what it is.</p>
 <h3 id="extract-a-single-sequence-from-the-contigs-file">Extract a single sequence from the contigs file.</h3>
 <p>Note the contig number (column 1 in the Contig stats file) of a contig with a coverage of over 300. There should be a few of them. We need to extract the fasta sequence of this contig from the contigs multifasta so we can see it more easily.</p>
-<p>To do this we will use the tool:
-  * <strong>Fasta manipulation -&gt; Fasta Extract Sequence</strong>
-  * Set the following:
-    * "Fasta or multifasta file": <em>Velvet Optimiser ... : Contigs</em>
-    * "Sequence ID (or partial): <em>NODE_1_...</em> (for example)
-  * Click <strong>Execute</strong></p>
+<p>To do this we will use the tool:</p>
+<ul>
+<li><strong>Fasta manipulation -&gt; Fasta Extract Sequence</strong></li>
+<li>Set the following:<ul>
+<li>"Fasta or multifasta file": <em>Velvet Optimiser ... : Contigs</em></li>
+<li>"Sequence ID (or partial): <em>NODE_1_...</em> (for example)</li>
+</ul>
+</li>
+<li>Click <strong>Execute</strong></li>
+</ul>
 <p>The new data object in the history is called: <em>Fasta Extract Sequence on data 10: Fasta</em>.</p>
 <p>Click on its <img src="../media/Galaxy-view.png" width=20 /> icon to view it. It is a single sequence in fasta format.</p>
 <h3 id="blast-sequence-to-determine-what-it-contains">Blast sequence to determine what it contains.</h3>
