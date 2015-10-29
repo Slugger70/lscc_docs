@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Screenshots - LSCC Documentation</title>
+	<title>Galaxy Background - LSCC Documentation</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -108,7 +108,7 @@
                             <a href="../../python_overview/python_overview/">Python Overview</a>
                         </li>
                     
-                        <li class="active">
+                        <li >
                             <a href="">Microbial de novo Assembly for Illumina Data</a>
                         </li>
                     
@@ -116,7 +116,7 @@
                             <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
                         </li>
                     
-                        <li >
+                        <li class="active">
                             <a href="">Identifying proteins from mass spectrometry data</a>
                         </li>
                     
@@ -130,7 +130,7 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
                         </li>
                     
                     </ul>
@@ -142,12 +142,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../assembly/">
+                    <a rel="next" href="../proteomics_basic/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../assembly-background/">
+                    <a rel="prev" href="../background_data_formats/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -161,49 +161,76 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</a></li>
+        <li class="main active"><a href="#how-to-use-galaxy">How to use Galaxy</a></li>
         
-    
-        <li class="main "><a href="#figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</a></li>
+            <li><a href="#create-a-new-history">Create a new History</a></li>
         
-    
-        <li class="main "><a href="#figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</a></li>
+            <li><a href="#rename-a-history-item">Rename a history item</a></li>
         
-    
-        <li class="main "><a href="#figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</a></li>
+            <li><a href="#find-someones-exact-username">Find someone's exact username</a></li>
         
-    
-        <li class="main "><a href="#figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</a></li>
+            <li><a href="#share-a-history">Share a History</a></li>
         
-    
-        <li class="main "><a href="#a">a</a></li>
+            <li><a href="#import-a-history">Import a History</a></li>
         
-    
-        <li class="main "><a href="#b">b</a></li>
+            <li><a href="#copy-datasets">Copy Datasets</a></li>
         
-    
-        <li class="main "><a href="#figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</a></li>
+            <li><a href="#multi-file-inputs">Multi File Inputs</a></li>
+        
+            <li><a href="#saved-histories">Saved Histories</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-interface.png" width=100% /></p>
-<h3 id="figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-output.png" width=100% /></p>
-<h3 id="figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</h3>
-<p><img src="../media/screenshot-trimmomatic-inputs.png" width=100% /></p>
-<h3 id="figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</h3>
-<p><img src="../media/screenshot-velvetoptimiser-inputs.png" width=100% /></p>
-<h3 id="figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</h3>
-<h3 id="a">a</h3>
-<p><img src="../media/screenshot-contigs.png" width=100% /></p>
-<h3 id="b">b</h3>
-<p><img src="../media/screenshot-contig-stats.png" width=100% /></p>
-<h3 id="figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</h3>
-<p><img src="../media/screenshot-blast.png" width=100% /></p></div>
+<h1 id="how-to-use-galaxy">How to use Galaxy</h1>
+<p>This background wiki gives very brief guides on performing specific tasks in Galaxy.  For much more extensive documentation including many videos, online tutorials and discussion forums please <a href="https://wiki.galaxyproject.org/">consult the galaxy wiki</a>.</p>
+<h2 id="create-a-new-history">Create a new History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Create new</code></li>
+<li>The new history will be called "Unnamed History". Click its title to rename it.</li>
+</ol>
+<h2 id="rename-a-history-item">Rename a history item</h2>
+<ol>
+<li>Locate the item in your history and click its pencil icon</li>
+<li>Enter a new name in the <code>Name:</code> field and click <code>Save</code></li>
+</ol>
+<p><img alt="Image of renaming a history item" src="../EditHistoryItem.png" /></p>
+<h2 id="find-someones-exact-username">Find someone's exact username</h2>
+<p>Click the <code>User</code> menu at the top of Galaxy.  The menu that appears will show the currently logged in username</p>
+<p><img alt="Screenshot showing how to view logged in user" src="../ViewLoggedInUser.png" /></p>
+<h2 id="share-a-history">Share a History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Share or Publish</code>
+    <img alt="Screenshot showing share or publish item" src="../ShareOrPublish.png" /></li>
+<li>Then select <code>Share with another user</code> and enter the user's <a href="#find-someones-exact-username">full username</a></li>
+</ol>
+<h2 id="import-a-history">Import a History</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Histories Shared with Me</code>
+    <img alt="Screenshot histories shared with me" src="../HistoriesSharedWithMe.png" /></li>
+<li>Select and view the desired history by clicking on its name
+    <img alt="Screenshot showing how to view a history" src="../ViewSharedHistory.png" /></li>
+</ol>
+<h2 id="copy-datasets">Copy Datasets</h2>
+<ol>
+<li>Click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy.</li>
+<li>Select <code>Histories Shared with Me</code>
+    <img alt="Screenshot copy datasets" src="../CopyDatasets1.png" /></li>
+<li>The screen that appears allows copying of specific datasets between any of your histories</li>
+</ol>
+<h2 id="multi-file-inputs">Multi File Inputs</h2>
+<p>Tools that support running over multiple input files indicate this by showing a multi-file icon beside the relevant input.
+After clicking the multi-file icon the display should change to allow multiple inputs to be selected.</p>
+<p><img alt="Screenshot for multi-file inputs" src="../MultiFileInputs.png" /></p>
+<h2 id="saved-histories">Saved Histories</h2>
+<p>To view a list of your saved histories click the <code>History Options</code> menu (cog icon) in the top-right corner of Galaxy and select <code>Saved Histories</code>
+Once the list of your histories appears you can switch to a history by clicking it. You can also use this view to delete histories or organise them by tags</p>
+<p><img alt="Screenshot saved histories" src="../SavedHistories.png" /></p></div>
         </div>
 
         <footer class="col-md-12">

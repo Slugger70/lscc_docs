@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Screenshots - LSCC Documentation</title>
+	<title>Create find count items workflow - LSCC Documentation</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -108,7 +108,7 @@
                             <a href="../../python_overview/python_overview/">Python Overview</a>
                         </li>
                     
-                        <li class="active">
+                        <li >
                             <a href="">Microbial de novo Assembly for Illumina Data</a>
                         </li>
                     
@@ -116,7 +116,7 @@
                             <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
                         </li>
                     
-                        <li >
+                        <li class="active">
                             <a href="">Identifying proteins from mass spectrometry data</a>
                         </li>
                     
@@ -130,7 +130,7 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
                         </li>
                     
                     </ul>
@@ -142,12 +142,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../assembly/">
+                    <a rel="next" href="../background_data_formats/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../assembly-background/">
+                    <a rel="prev" href="../background_protein_databases/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -161,49 +161,47 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</a></li>
-        
-    
-        <li class="main "><a href="#a">a</a></li>
-        
-    
-        <li class="main "><a href="#b">b</a></li>
-        
-    
-        <li class="main "><a href="#figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</a></li>
+        <li class="main active"><a href="#create-a-workflow">Create a workflow</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-interface.png" width=100% /></p>
-<h3 id="figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-output.png" width=100% /></p>
-<h3 id="figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</h3>
-<p><img src="../media/screenshot-trimmomatic-inputs.png" width=100% /></p>
-<h3 id="figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</h3>
-<p><img src="../media/screenshot-velvetoptimiser-inputs.png" width=100% /></p>
-<h3 id="figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</h3>
-<h3 id="a">a</h3>
-<p><img src="../media/screenshot-contigs.png" width=100% /></p>
-<h3 id="b">b</h3>
-<p><img src="../media/screenshot-contig-stats.png" width=100% /></p>
-<h3 id="figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</h3>
-<p><img src="../media/screenshot-blast.png" width=100% /></p></div>
+<h1 id="create-a-workflow">Create a workflow</h1>
+<ol>
+<li>Click the <em>Workflow</em> menu item at the top of galaxy</li>
+<li>
+<p>Click the button called <em>Create New Workflow</em></p>
+<p><img alt="Image of workflow menu" src="../media/WorkflowMenu.png" /></p>
+</li>
+<li>
+<p>Enter a name and description for the new workflow and click <em>Create</em></p>
+</li>
+<li>
+<p>You should now have a blank workflow canvas.  Create an input box for the workflow by scrolling to the bottom left of the galaxy tool menu.  Under <em>Workflow Control</em> and then under <em>Inputs</em> you should see an <em>Input dataset</em> item. Click it to create a blank input box</p>
+<p><img alt="Image add workflow input" src="../media/MakeInputDataSet.png" /></p>
+</li>
+<li>
+<p>Now add workflow nodes for other tools by clicking on the relevant tool in the galaxy tool menu (left pane of galaxy). The tools to add are;</p>
+<ul>
+<li>The <em>Select</em> tool from the <em>Find and Sort</em> submenu</li>
+<li>The <em>Line/Word/Character</em> count tool from the <em>Text Manipulation</em> submenu</li>
+</ul>
+</li>
+<li>
+<p>After adding these tools you can join them up by dragging from the outputs of one node to the inputs of the next</p>
+<p><img alt="Image workflow join nodes" src="../media/JoinWorkflowTools.png" /></p>
+</li>
+<li>
+<p>Save your workflow</p>
+<p><img alt="Image save workflow" src="../media/SaveWorkflow.png" /></p>
+</li>
+<li>
+<p>After saving the workflow return to the main <em>Workflow</em> menu (top of Galaxy) and select your new workflow to run it.  Before running the workflow you will be presented with a window that allows you to alter the workflow inputs. </p>
+<p><img alt="Image edit workflow inputs" src="../media/EditWorkflowInputs.png" /></p>
+</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">

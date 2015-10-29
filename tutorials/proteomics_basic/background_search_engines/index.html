@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Screenshots - LSCC Documentation</title>
+	<title>Search Engines - LSCC Documentation</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -108,7 +108,7 @@
                             <a href="../../python_overview/python_overview/">Python Overview</a>
                         </li>
                     
-                        <li class="active">
+                        <li >
                             <a href="">Microbial de novo Assembly for Illumina Data</a>
                         </li>
                     
@@ -116,7 +116,7 @@
                             <a href="../../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
                         </li>
                     
-                        <li >
+                        <li class="active">
                             <a href="">Identifying proteins from mass spectrometry data</a>
                         </li>
                     
@@ -130,7 +130,7 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
+                            <a href="../../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
                         </li>
                     
                     </ul>
@@ -142,12 +142,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../assembly/">
+                    <a rel="next" href="../background_protein_databases/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../assembly-background/">
+                    <a rel="prev" href="../background_protein_prophet/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -161,49 +161,30 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</a></li>
-        
-    
-        <li class="main "><a href="#figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</a></li>
-        
-    
-        <li class="main "><a href="#a">a</a></li>
-        
-    
-        <li class="main "><a href="#b">b</a></li>
-        
-    
-        <li class="main "><a href="#figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</a></li>
+        <li class="main active"><a href="#how-search-engines-work">How Search Engines Work</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="figure-1-screenshot-of-fastqc-interface-in-galaxy">Figure 1: Screenshot of FastQC interface in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-interface.png" width=100% /></p>
-<h3 id="figure-2-screenshot-of-fastqc-output-in-galaxy">Figure 2: Screenshot of FastQC output in Galaxy</h3>
-<p><img src="../media/screenshot-fastqc-output.png" width=100% /></p>
-<h3 id="figure-3-screenshot-of-trimmomatic-inputs-in-galaxy">Figure 3: Screenshot of Trimmomatic inputs in Galaxy</h3>
-<p><img src="../media/screenshot-trimmomatic-inputs.png" width=100% /></p>
-<h3 id="figure-4-screenshot-of-velvet-optimiser-inputs-in-galaxy">Figure 4: Screenshot of Velvet Optimiser inputs in Galaxy</h3>
-<p><img src="../media/screenshot-velvetoptimiser-inputs.png" width=100% /></p>
-<h3 id="figure-5-screenshot-of-assembled-contigs-a-and-contig-stats-b">Figure 5: Screenshot of assembled contigs (a) and contig stats (b)</h3>
-<h3 id="a">a</h3>
-<p><img src="../media/screenshot-contigs.png" width=100% /></p>
-<h3 id="b">b</h3>
-<p><img src="../media/screenshot-contig-stats.png" width=100% /></p>
-<h3 id="figure-6-screenshot-of-the-output-from-the-ncbi-blast-website">Figure 6: Screenshot of the output from the NCBI Blast website</h3>
-<p><img src="../media/screenshot-blast.png" width=100% /></p></div>
+<h1 id="how-search-engines-work">How Search Engines Work</h1>
+<p>When choosing search engine parameters it can be helpful to understand the basic algorithms that most search engines share. The workflow of a typical search engine is roughly as outlined below.</p>
+<ol>
+<li>The next spectrum in the dataset is loaded for consideration</li>
+<li>The spectrum parent mass and the parent mass tolerance is used to select a small set of matching peptides from the database.  This is a crucial step because the number of peptides that fall within the matching mass window will determine the effective size of the search space.  Database search space size also depends on many other factors including<ul>
+<li>The size of the protein database</li>
+<li>Variable modifications allowed on peptides</li>
+<li>Parent ion mass tolerance</li>
+<li>Number of allowed missed enzymatic cleavages</li>
+<li>Specificity of the enzyme used for digestion</li>
+</ul>
+</li>
+<li>Each of the matching peptides is scored against the spectrum. The nature of this scoring is where search engines typically differ from each other.</li>
+<li>The highest scoring <code>peptide spectrum match</code> (PSM) is recorded along with its score.</li>
+<li>Some form of global analysis of (PSM) scores is performed in order to determine a threshold of significance</li>
+</ol>
+<p>There are many excellent presentations online that explain this in more detail.  Although it's old, I recommend <a href="http://www.slideshare.net/ProteomeSoftware/interpreting-msms-results">this presentation by Brian Searle</a></p></div>
         </div>
 
         <footer class="col-md-12">
