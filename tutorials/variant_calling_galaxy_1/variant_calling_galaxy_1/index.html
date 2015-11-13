@@ -85,15 +85,19 @@
                         </li>
                     
                         <li >
-                            <a href="../../var_detect_advanced/var_detect_advanced_background/">Variant Detection Advanced</a>
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
                         </li>
                     
                         <li >
-                            <a href="../../rna_seq_dge_basic/rna_seq_basic_background/">RNA Seq Basic</a>
+                            <a href="../../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
                         </li>
                     
                         <li >
-                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA Seq Experimental Design</a>
+                            <a href="../../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
                         </li>
                     
                         <li >
@@ -114,6 +118,10 @@
                     
                         <li class="active">
                             <a href="./">Introduction to Variant Calling using Galaxy</a>
+                        </li>
+                    
+                        <li >
+                            <a href="">Variant Detection Advanced</a>
                         </li>
                     
                         <li >
@@ -147,7 +155,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../proteomics_basic/proteomics_basic/">
+                    <a rel="prev" href="../../var_detect_advanced/var_detect_advanced/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -285,16 +293,19 @@ Look at the various quality scores. The data looks pretty good - <em>high Per ba
 <p>The basic process here to map individual reads - from the input sample FASTQ file - to a matching region on the reference genome.</p>
 <ol>
 <li>Map/align the reads with the <a href="http://bio-bwa.sourceforge.net/">BWA</a> tool to Human reference genome 19 (hg19) <a href="http://genome.ucsc.edu/cgi-bin/hgTracks">UCSC hg19</a>.
-  From the Galaxy tools panel, select
-  ```
-  NGS: Mapping &gt; Map with BWA-MEM [3-5mins]</li>
+  From the Galaxy tools panel, select</li>
 </ol>
-<p>From the options:
-  Using reference genome: set to hg19.
-  Single or Paired-end reads: set to Single</p>
-<p>keep other options as default and click execute
-  ```
-  <em>Note: This is the longest step in the workshop and will take a few minutes, possibly more depending on how many people are also scheduling mappings</em></p>
+<div class=code>
+    NGS: Mapping > Map with BWA-MEM [3-5mins]<br>
+
+    From the options:<br>
+    Using reference genome: set to hg19.<br>
+    Single or Paired-end reads: set to Single<br>
+
+    keep other options as default and click execute
+</div>
+
+<p><em>Note: This is the longest step in the workshop and will take a few minutes, possibly more depending on how many people are also scheduling mappings</em></p>
 <ol>
 <li>Sort the BAM file.
   From the Galaxy tools panel, select
