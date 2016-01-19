@@ -246,13 +246,13 @@
 <p>The data for this workshop is the same as that used in the GVL Introductory Variant Detection tutorial. It is short read data from the exome of chromosome 22 of a single human individual. There are one million 76bp reads in the dataset, produced on an Illumina GAIIx from exome-enriched DNA. This data was generated as part of the 1000 Genomes project: <a href="http://www.1000genomes.org/">http://www.1000genomes.org/</a>.</p>
 <h3 id="alignment">Alignment</h3>
 <h4 id="run-bwa">Run BWA</h4>
-<p>For our alignment, we will use the tool BWA, which stands for "Burrows-Wheeler Aligner". You can see its website, if interested, at <a href="http://bio-bwa.sourceforge.net/">http://bio-bwa.sourceforge.net/</a>.</p>
+<p>For our alignment, we will use the tool BWA, which stands for "Burrows-Wheeler Aligner". You can see its website, if interested, at <a href="http://bio-bwa.sourceforge.net/">http://bio-bwa.sourceforge.net/</a>. We will be using the bwa mem variant.</p>
 <p>Hopefully, everything will be working fine, so the first thing we need to do is run BWA.. To do this, use the following steps.</p>
 <ol>
 <li>
-<p>In the Galaxy tool pane on the left, under <strong>NGS: Mapping</strong> select the tool <strong>Map with BWA</strong>.</p>
+<p>In the Galaxy tool pane on the left, under <strong>NGS: Mapping</strong> select the tool <strong>Map with BWA-MEM</strong>.</p>
 <ul>
-<li>We want to align this data to the human genome. Have a look under <strong>Select a reference genome</strong>. Choose <em>hg19</em>. This is Human reference genome 19 (<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&amp;position=chr9%3A133252000-133280861&amp;hgsid=469994169_9o1YboOfEP0gNexrwy41qevQrTdZ">UCSC hg19</a>).</li>
+<li>We want to align this data to the human genome. Have a look under <strong>Using reference genome</strong>. Choose <em>hg19</em>. This is Human reference genome 19 (<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&amp;position=chr9%3A133252000-133280861&amp;hgsid=469994169_9o1YboOfEP0gNexrwy41qevQrTdZ">UCSC hg19</a>).</li>
 <li>Set <strong>Single or Paired-end reads</strong> to <em>Single</em></li>
 <li>Specify the FASTQ file as input - it may be automatically selected already.</li>
 <li>For our alignment, it will be ok to use the default alignment parameters. However, have a look at the options you can change by setting <strong>Select analysis mode</strong> to <em>Full list of options</em>. Look through the parameters and see if you understand from lectures what they are for. You can also read documentation on these options by scrolling down the Galaxy BWA tool page.</li>
@@ -347,7 +347,7 @@ ls galaxy_genomes/hg19/bwa_mem_index/hg19/
 <p>Use <code>less</code> to examine it.</p>
 <h3 id="make-the-bam-file">Make the BAM file</h3>
 <p>Try to convert your SAM file to a BAM file using samtools view. The command you'll need is:</p>
-<pre><code>samtools view -S -b -h aligned_reads.sam &gt; aligned_reads.bam
+<pre><code>samtools view -b -h aligned_reads.sam &gt; aligned_reads.bam
 </code></pre>
 <p>You can look up the effect of all these command line flags by typing the view command by itself, or by reading the samtools documentation.</p>
 <h3 id="other-sam-tools-commands">Other SAM tools commands</h3>
