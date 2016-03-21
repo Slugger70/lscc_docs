@@ -341,6 +341,10 @@
 <h1 id="introduction-to-galaxy">Introduction to Galaxy</h1>
 <p>Written and maintained by <a href="mailto:simon.gladman@unimelb.edu.au">Simon Gladman</a> - VLSCI</p>
 <h2 id="background">Background</h2>
+<p>Galaxy is a web based analysis and workflow platform designed for biologists to analyse their own data. It comes with most of the popular bioinformatics tools already installed and ready for use. There are many Galaxy servers around the world and some are tailored with specific toolsets and reference data for analysis of human genomics, microbial genomics, proteomics etc.</p>
+<p>There are some introductory slides available <a href="https://docs.google.com/presentation/d/1dzHagGkswjH7MOZ7OACVXGU-riBs33K3J5lWpnCpPhs/pub?start=false&amp;loop=false&amp;slide=id.g537781ff1_2_18">here</a>.</p>
+<p>Basically, the Galaxy interface is separated into 3 parts. The tool list on the left, the viewing pane in the middle and the analysis and data history on the right. We will be looking at all 3 parts in this tutorial.</p>
+<p><img src="../media/Galaxy_components.png" alt="Galaxy interface components diagram" width="70%" /></p>
 <p>This workshop/tutorial will familiarize you with the Galaxy interface. It will cover the following topics:</p>
 <ul>
 <li>Logging in to the server</li>
@@ -348,6 +352,7 @@
 <li>How to access the tools</li>
 <li>Using to use some common tools</li>
 </ul>
+<hr />
 <h2 id="learning-objectives">Learning Objectives</h2>
 <p>At the end of this tutorial you should:</p>
 <ol>
@@ -434,6 +439,13 @@
 </ul>
 <p>Note that Galaxy is smart enough to recognize that this is a compressed file and so it will uncompress it as it loads it.</p>
 <h3 id="method-2-again-get-data-from-a-public-url">Method 2 (again): Get data from a public URL</h3>
+<p>Now we are going to upload another file from the remote data source.</p>
+<p>Repeat the above for: <em>https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/MRSA0252.fna</em></p>
+<p>Note that this file is a <em>fasta</em> file and not a <em>fastqsanger</em> file.</p>
+<div class="showable-container details showable-hidden" id="showable0">
+<div class="showable-inner">
+<div class="showable-header details" id="showabletitle0"><a href="" id="showablelink0">Reveal detailed instructions</a></div>
+<div class="showable-body details" id="showablebody0">
 <ul>
 <li>
 <p>From the tool panel, click on <strong>Get Data -&gt; Upload File</strong></p>
@@ -446,6 +458,18 @@
 </ul>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script>
+    $(document).ready(function(){
+        $("#showablelink0").click(function(e){
+            e.preventDefault();
+            $("#showable0").toggleClass("showable-hidden");
+        });
+    });
+    </script>
 <p>The DNA sequence of <em>Staphlococcus aureus MRSA252</em> will be loaded into your history as a fasta file.</p>
 <p>Your history should now look like this.</p>
 <p><img src="../media/starting-history.png" width="300px" align="center" /></p>
