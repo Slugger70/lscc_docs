@@ -42,6 +42,15 @@ It does not cover more complicated aspects of assembly such as:
 * Gap filling techniques for “finishing” an assembly
 * Measuring the accuracy of assemblies
 
+## Learning Objectives
+
+By the end of this tutorial, you should be able to:
+
+1. Load data into Galaxy from a public URL.
+2. Perform a quality control protocol on the incoming data and make an informed decision on quality filtering/cleanup.
+3. Perform an assembly on the cleaned up Illumina data using Velvet and the Velvet Optimiser.
+4. How to extract a single contig of choice from the assembly.
+
 ## Background
 
 Read the [background to the workshop here](assembly-background.md#background)
