@@ -138,7 +138,7 @@ Note that this file is a *fasta* file and not a *fastqsanger* file.
 
 \endshowable
 
-The DNA sequence of *Staphlococcus aureus MRSA252* will be loaded into your history as a fasta file.
+The DNA sequence of *Staphylococcus aureus MRSA252* will be loaded into your history as a fasta file.
 
 Your history should now look like this.
 
